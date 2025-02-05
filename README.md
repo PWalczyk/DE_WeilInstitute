@@ -1,6 +1,8 @@
 # DE_WeilInstitute
 A Repository for the Data Engineer Technical Interview at the Weil Institute at the University of Michigan.
 
+The Jupyter Notebook html (walkthrough.html) with have an overview of the technical challenge content.
+
 # Project Setup
 
 ## Create a Virtual Environment
