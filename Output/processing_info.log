@@ -1,0 +1,140 @@
+2025-02-04 19:44:50,633 - INFO - 
+--- Cohort Builder Logger Initialized ---
+2025-02-04 19:44:50,633 - INFO - 
+--- Cohort Builder Connceted to DataBase Successfully. ---
+2025-02-04 19:44:50,633 - INFO - 
+--- Data Investigation ---
+2025-02-04 19:44:50,634 - INFO - 
+Analyzing Table: PATIENTS
+2025-02-04 19:44:50,636 - INFO - Primary Keys in PATIENTS: None
+2025-02-04 19:44:50,836 - INFO - 
+Missing Values:
+DOD         36352
+DOD_HOSP    43861
+DOD_SSN     39866
+2025-02-04 19:44:50,836 - INFO - 
+Duplicate Rows: 0
+2025-02-04 19:44:50,837 - INFO - 
+Analyzing Table: TRANSFERS
+2025-02-04 19:44:50,838 - INFO - Primary Keys in TRANSFERS: None
+2025-02-04 19:44:50,933 - INFO - 
+Missing Values:
+EVENTTYPE            2
+PREV_CAREUNIT    18822
+CURR_CAREUNIT    18824
+INTIME               2
+OUTTIME           6497
+2025-02-04 19:44:50,933 - INFO - 
+Duplicate Rows: 0
+2025-02-04 19:44:50,934 - INFO - 
+Analyzing Table: CARE_GIVERS
+2025-02-04 19:44:50,935 - INFO - Primary Keys in CARE_GIVERS: None
+2025-02-04 19:44:50,958 - INFO - 
+Missing Values:
+LABEL            49
+DESCRIPTION    2412
+2025-02-04 19:44:50,958 - INFO - 
+Duplicate Rows: 0
+2025-02-04 19:44:50,958 - INFO - 
+Analyzing Table: TREATMENT_TEAM
+2025-02-04 19:44:50,960 - INFO - Primary Keys in TREATMENT_TEAM: None
+2025-02-04 19:44:51,211 - INFO - 
+Missing Values:
+None
+2025-02-04 19:44:51,211 - INFO - 
+Duplicate Rows: 0
+2025-02-04 19:44:51,211 - INFO - 
+Analyzing Table: LABS
+2025-02-04 19:44:51,212 - INFO - Primary Keys in LABS: None
+2025-02-04 19:44:59,686 - INFO - 
+Missing Values:
+VALUENUM    274692
+VALUEUOM    325178
+2025-02-04 19:44:59,686 - INFO - 
+Duplicate Rows: 0
+2025-02-04 19:44:59,686 - INFO - 
+Analyzing Table: ICD_DIAGNOSES
+2025-02-04 19:44:59,687 - INFO - Primary Keys in ICD_DIAGNOSES: None
+2025-02-04 19:44:59,902 - INFO - 
+Missing Values:
+None
+2025-02-04 19:44:59,902 - INFO - 
+Duplicate Rows: 0
+2025-02-04 19:44:59,902 - INFO - 
+Analyzing Table: DIAGNOSES
+2025-02-04 19:44:59,903 - INFO - Primary Keys in DIAGNOSES: None
+2025-02-04 19:45:01,501 - INFO - 
+Missing Values:
+SEQ_NUM      47
+ICD9_CODE    47
+2025-02-04 19:45:01,501 - INFO - 
+Duplicate Rows: 0
+2025-02-04 19:45:01,501 - INFO - 
+Analyzing Table: ICD_LABS
+2025-02-04 19:45:01,503 - INFO - Primary Keys in ICD_LABS: None
+2025-02-04 19:45:01,537 - INFO - 
+Missing Values:
+LOINC_CODE    168
+2025-02-04 19:45:01,537 - INFO - 
+Duplicate Rows: 0
+2025-02-04 19:45:01,537 - INFO - 
+ Data_summary: {'PATIENTS': {'primary_keys': 'None', 'missing_values': {'DOD': 36352, 'DOD_HOSP': 43861, 'DOD_SSN': 39866}, 'duplicates': np.int64(0), 'foreign_keys': 'None'}, 'TRANSFERS': {'primary_keys': 'None', 'missing_values': {'EVENTTYPE': 2, 'PREV_CAREUNIT': 18822, 'CURR_CAREUNIT': 18824, 'INTIME': 2, 'OUTTIME': 6497}, 'duplicates': np.int64(0), 'foreign_keys': 'None'}, 'CARE_GIVERS': {'primary_keys': 'None', 'missing_values': {'LABEL': 49, 'DESCRIPTION': 2412}, 'duplicates': np.int64(0), 'foreign_keys': 'None'}, 'TREATMENT_TEAM': {'primary_keys': 'None', 'missing_values': {}, 'duplicates': np.int64(0), 'foreign_keys': 'None'}, 'LABS': {'primary_keys': 'None', 'missing_values': {'VALUENUM': 274692, 'VALUEUOM': 325178}, 'duplicates': np.int64(0), 'foreign_keys': 'None'}, 'ICD_DIAGNOSES': {'primary_keys': 'None', 'missing_values': {}, 'duplicates': np.int64(0), 'foreign_keys': 'None'}, 'DIAGNOSES': {'primary_keys': 'None', 'missing_values': {'SEQ_NUM': 47, 'ICD9_CODE': 47}, 'duplicates': np.int64(0), 'foreign_keys': 'None'}, 'ICD_LABS': {'primary_keys': 'None', 'missing_values': {'LOINC_CODE': 168}, 'duplicates': np.int64(0), 'foreign_keys': 'None'}}
+2025-02-04 19:45:01,537 - INFO - 
+--- Foreign Key Summary Across Tables ---
+2025-02-04 19:45:01,537 - INFO - No foreign keys found.
+2025-02-04 19:45:01,537 - INFO - 
+ Querying Database for HF/CD Patients Admitted in June 2000
+2025-02-04 19:45:05,813 - INFO - 
+ Retrieved 767 HF/CD patients admitted in June 2000
+2025-02-04 19:45:05,813 - INFO - 
+ Querying Database for Nurse Assignments
+2025-02-04 19:45:06,983 - INFO - 
+ Retrieved 126536 nurse assignments across units
+2025-02-04 19:45:06,983 - INFO - 
+ Generating 12-hour Time Blocks for Patients and Nurses
+2025-02-04 19:45:19,817 - INFO - 
+ Successfully Generated 12-hour Time Blocks for Patients and Nurses
+2025-02-04 19:45:19,817 - INFO - 
+ Generated 59811 time-block entries for 1299 patients.
+2025-02-04 19:45:19,817 - INFO - 
+ Generated 251592 time-block entries for 126536 nurses.
+2025-02-04 19:45:21,180 - INFO - 
+ Computing Discharge-to-Nurse Ratio for 12-hour Blocks using 4-hour Sub-blocks
+2025-02-04 19:45:27,084 - INFO - 
+ Successfully Computed Discharge-to-Nurse Ratio for 12-hour Blocks using 4-hour Sub-blocks
+2025-02-04 19:45:27,084 - INFO - 
+ Computed discharge-to-nurse ratio for 413 12-hour blocks.
+2025-02-04 19:45:27,087 - INFO - 
+ Computing Nurse-to-Patient Ratio for 12-hour Blocks using 4-hour Sub-blocks
+2025-02-04 19:45:27,264 - INFO - 
+ Successfully Computed Nurse-to-Patient Ratio for 12-hour Blocks using 4-hour Sub-blocks
+2025-02-04 19:45:27,264 - INFO - 
+ Computed nurse-to-patient ratio for 413 12-hour blocks.
+2025-02-04 19:45:27,270 - INFO - 
+ Subsetting Troponin & BNP Tests for Cohort Patients
+2025-02-04 19:45:28,561 - INFO - 
+ Successfully Subsetting Troponin & BNP Tests for Cohort Patients
+2025-02-04 19:45:28,561 - INFO - 
+ Loaded 4198 Troponin & BNP test results for cohort patients.
+2025-02-04 19:45:28,588 - INFO - 
+ Computing Latest Troponin Values for 12-hour Blocks for Cohort Patients
+2025-02-04 19:45:28,758 - INFO - 
+ Computed latest Troponin values for 12045 12-hour blocks.
+2025-02-04 19:45:28,790 - INFO - 
+ Computing Latest BNP Values for 12-hour Blocks for Cohort Patients
+2025-02-04 19:45:28,890 - INFO - 
+ Computed latest BNP values for 12045 12-hour blocks.
+2025-02-04 19:45:28,921 - INFO - 
+ Retrieving Latest TROPONIN_VAL Values for Patients
+2025-02-04 19:45:28,951 - INFO - 
+ [INFO] Retrieved latest TROPONIN_VAL values for 734 patients.
+2025-02-04 19:45:28,953 - INFO - 
+ Retrieving Latest BNP_VAL Values for Patients
+2025-02-04 19:45:28,978 - INFO - 
+ [INFO] Retrieved latest BNP_VAL values for 734 patients.
+2025-02-04 19:45:28,980 - INFO - 
+Cohort data successfully generated.
+2025-02-04 19:45:28,980 - INFO - 
+Closing database connection.
+2025-02-04 19:45:28,980 - INFO - 
+Database connection closed.
